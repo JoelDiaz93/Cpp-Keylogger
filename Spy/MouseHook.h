@@ -7,15 +7,14 @@
 
 class MouseHook {
 public:
-	//single ton
 	static MouseHook& Instance() {
 		static MouseHook myHook;
 		return myHook;
 	}
-	HHOOK hook; // handle to the hook	
-	void InstallHook(); // function to install our hook
-	void UninstallHook(); // function to uninstall our hook
+	HHOOK hook;
+	void InstallHook();
+	void UninstallHook();
 
-	MSG msg; // struct with information about all messages in our queue
-	int Messsages(); // function to "deal" with our messages 
+	MSG msg;
+	int Messsages();
 };

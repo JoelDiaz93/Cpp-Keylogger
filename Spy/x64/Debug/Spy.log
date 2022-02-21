@@ -1,3 +1,3 @@
 ﻿  Spy.cpp
-C:\Users\Joel\source\repos\Spy\Spy\Spy.cpp(87,9): warning C4101: 'hStart': variable local sin referencia
+C:\Users\Joel\source\repos\Spy\Spy\Spy.cpp(90,9): warning C4101: 'hStart': variable local sin referencia
   Spy.vcxproj -> C:\Users\Joel\source\repos\Spy\x64\Debug\Spy.exe

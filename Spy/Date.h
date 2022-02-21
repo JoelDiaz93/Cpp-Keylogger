@@ -1,6 +1,7 @@
 #pragma once
 #include <Windows.h>
-#include <iostream> 
+#include <iostream>
+#include <string>
 #include <time.h>
 
 class Date {

@@ -7,9 +7,8 @@ _Este software se encarga de interceptar y registrar las pulsaciones que se real
 ## Tabla de contenidos 📖
 =================
 
-* [Descripción y contexto](#descripcion-y-contexto)
-* [Clonar este repositorio](#clonar-este-repositorio)
-* [Información del proyecto](#informaci%C3%B3n-del-proyecto)
+* [Descripción y contexto](#descripci%C3%B3n-y-contexto%F0%9F%93%9C)
+* [Clonar este repositorio](#clonar-este-repositorio-%F0%9F%96%A5%EF%B8%8F)
 * [Guía de instalación](#gu%C3%ADa-de-instalaci%C3%B3n-%F0%9F%94%A7)
     * [Prerrequisitos](#prerrequisitos-%F0%9F%93%8B)
     * [Instalación](#instalaci%C3%B3n-%E2%9A%99%EF%B8%8F)

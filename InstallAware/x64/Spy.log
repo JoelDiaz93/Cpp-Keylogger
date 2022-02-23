@@ -1,0 +1,19 @@
+﻿
+ M     M  SSSSSS  IIIIII
+ MM   MM  SS        II
+ M M M M  SSSSSS    II    InstallAware MSIcode Compiler (Peyami Safa)
+ M  M  M      SS    II
+ M     M  SSSSSS  IIIIII
+
+Copyright(C) 1996-2022 InstallAware Software. All rights reserved.
+
+Building Project: Spy
+Output Folder: C:\Users\Joel\source\repos\Spy\InstallAware\x64\Release\Uncompressed\
+Deployment Type: Uncompressed Directory Layout
+Code Signing: Disabled
+Compression: Default
+Compiler Variables: UAC=highestAvailable,BUILDMODE=CD,LANGUAGE=English,TITLE=Spy,TARGETDIR=$TARGETDIR$,IADIR=C:\PROGRA~2\INSTAL~2,PROJDIR=C:\Users\Joel\source\repos\Spy\INSTAL~1\x64,IAVER=31.09
+###
+Cleared output folder C:\Users\Joel\source\repos\Spy\InstallAware\x64\Release\Uncompressed\
+Built plug-in action (Un)Install MSI Setup
+Error during build: Failed to compile plug-in action: File Bag

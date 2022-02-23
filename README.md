@@ -5,24 +5,23 @@ _Este software se encarga de interceptar y registrar las pulsaciones que se real
 #### Importante: Este proyecto se ha desarrollado con fines académicos.
 
 ## Tabla de contenidos 📖
-=================
 
-* [Descripción y contexto](#descripci%C3%B3n-y-contexto%F0%9F%93%9C)
-* [Clonar este repositorio](#clonar-este-repositorio-%F0%9F%96%A5%EF%B8%8F)
-* [Guía de instalación](#gu%C3%ADa-de-instalaci%C3%B3n-%F0%9F%94%A7)
-    * [Prerrequisitos](#prerrequisitos-%F0%9F%93%8B)
-    * [Instalación](#instalaci%C3%B3n-%E2%9A%99%EF%B8%8F)
-* [Guía de usuario](#gu%C3%ADa-de-usuario-%F0%9F%A4%93)
+* [Descripción y contexto](#descripci%C3%B3n-y-contexto)
+* [Clonar este repositorio](#clonar-este-repositorio)
+* [Guía de instalación](#gu%C3%ADa-de-instalaci%C3%B3n)
+    * [Prerrequisitos](#prerrequisitos)
+    * [Instalación](#instalaci%C3%B3n)
+* [Guía de usuario](#gu%C3%ADa-de-usuario)
     * [Directorio raíz de los registros](#directorio-ra%C3%ADz-de-los-registros)
     * [Directorio raíz de los registros del teclado](#directorio-ra%C3%ADz-de-los-registros-del-teclado)
     * [Directorio raíz de los registros del mouse](#directorio-ra%C3%ADz-de-los-registros-del-mouse)
     * [Directorio raíz de los registros de las capturas de pantalla](#directorio-ra%C3%ADz-de-los-registros-de-las-capturas-de-pantalla)
     * [Configuración](#configuraci%C3%B3n)
 
-## Descripción y contexto📜
+## Descripción y contexto
 Keylogger que se ha desarrollado y tiene como por objetivo demostrar lo vulnerable que puede ser el sistema operativo Windows 11 ante un spyware. Cuenta con un instalador el cual realiza el proceso de transferencia de los archivos del Keylogger en el computador para ser infectado, después de su instalación se ejecutará cada vez que se inicie Windows. Se diseño para que funcione en segundo plano y no muestre mensajes en pantalla de tal manera que pase desapercibido por el usuario infectado. Después del proceso de interceptar pulsaciones se genera la información, esta se puede ver de manera local donde los registros se encuentren dentro de archivos de texto y las capturas en imágenes con formato JPEG. Se estableció para sea una aplicación de consola con el lenguaje de programación C++ empleando bibliotecas nativas de Windows para que sea compatible con las computadoras que se desea infectar.
 
-## Clonar este repositorio 🖥️
+## Clonar este repositorio
 Para clonar este repositorio sigue los siguientes pasos:
 
 Descargue el repositorio utilizando el navegador o con el bash
@@ -44,12 +43,12 @@ Requisitos para modificar el código.
 - Estándar de lenguaje C: Estándar ISO C17
  ```
 
-## Guía de instalación 🔧
+## Guía de instalación
 Este proyecto dispone de un conjunto de archivos con los cuales es posible instalar el **Keylogger**, para ello es necesario seguir ciertos pasos los cuales se describen a continuación:
 
-### Prerrequisitos 📋
+### Prerrequisitos
 
-### Instalación ⚙️
+### Instalación
 
 Descargar la última versión del **Keylogger**:
 [Instalador del Keylogger](https://github.com/JoelDiaz93/Cpp-Keylogger/releases)
@@ -76,7 +75,7 @@ Si solo se desea terminar el proceso abierto por el **Keylogger**
 ..\kill.bat
 ```
 
-## Guía de usuario 🤓
+## Guía de usuario
 Una vez instalado el **Keylogger** este se iniciará automáticamente en segundo plano, su funcionamiento pasa por desapercibido para el usuario. 
 Las evidencias locales del funcionamiento de esta herramienta se lo pueden ver en el directorio:
 
